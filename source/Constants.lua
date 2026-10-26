@@ -3,7 +3,7 @@ Brian T.Wilcox
 twingears@gmail.com
 ]]      
 
-reVision = "Beta.4.64"
+reVision = "Beta.4.65"
 love.graphics.setDefaultFilter("nearest", "nearest")
 love.window.setFullscreen( true, "desktop" )  --DEFAULT true RUNNING MODE FOR THIS EDUCATIONAL GAME, HAS LAST SAY
 tPortHole = {}   				--FOR OUR SCREEN SIZES TO BE MORE PORTABLE

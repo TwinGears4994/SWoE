@@ -1,6 +1,7 @@
 --[[
 Brian T.Wilcox UCc1-308
 twingears@gmail.com
+https://github.com/TwinGears4994/SWoE
 2024-2025 Seeing Without Eyes - Solo Training
 Colour calibration & Shape testing; blind folded with MINDFOLD or what ever one uses to block screen/room light fully is how i like to do this.
 Colours & Shape are spoken as user selects what they feel is a match to what's on the screen.
@@ -93,17 +94,17 @@ function love:update(dt)  -- *** TIMING FOR SPEECH LIVES HERE - NARRATOR CAN BE 
     tSM:aLfileCk()                  --NEW BOOL TO SETUP aLoop INDEX TO 1
   elseif tSM.idxLoop == 1 then          --1st aLoop
     aLoop()
-  elseif tSM.idxLoop == 2 then  --bLoop
+  elseif tSM.idxLoop == 2 then  		--bLoop
     bLoop()
-  elseif tSM.idxLoop == 3 then  --cLoop
+  elseif tSM.idxLoop == 3 then  		--cLoop
     cLoop()
   elseif tSM.idxLoop == 4 and dtCounter > waitTime then    --dLoop BR USER
     dLoop()
-  elseif tSM.idxLoop == 5 then --and dtCounter > waitTime then    --eLoop BR COMP
+  elseif tSM.idxLoop == 5 then 			--and dtCounter > waitTime then    --eLoop BR COMP
     eLoop()
-  elseif tSM.idxLoop == 6 then    --fLoop SB AND EDIT-SB
+  elseif tSM.idxLoop == 6 then    	--fLoop SB AND EDIT-SB
     fLoop()
-  elseif tSM.idxLoop == 7 then    --fLoop REMOTE-VIEWING-OF-LCS-TA-STORY-TELLING OR LIVING BIBLE FOR LORDS AND LADIES, CURRENTLY JUST FILE PLACE HOLDERS - CHANGE OLD PYTHON CODE 1ST
+  elseif tSM.idxLoop == 7 then    	--fLoop REMOTE-VIEWING-OF-LCS-TA-STORY-TELLING OR LIVING BIBLE FOR LORDS AND LADIES, CURRENTLY JUST FILE PLACE HOLDERS - CHANGE OLD PYTHON CODE 1ST
     gLoop()
   end
 end

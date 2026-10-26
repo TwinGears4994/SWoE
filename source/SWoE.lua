@@ -5,23 +5,23 @@ twingears@gmail.com
 function aLoop()
 -- aLoop = { "FILE-CHK", "FILE-LOAD", "FILE-SAVE" }
   if tSM.aLoop[ tSM.idxState ] == "FILE-CHK" then
-    if createFilesys() then       --IF FILE SIZE >0
-      tSM:walk( true )   --bREWIND AS true =+1
+    if createFilesys() then       	--IF FILE SIZE >0
+      tSM:walk( true )   						--bREWIND AS true =+1
     else
       tSM:switch( false )           --"INTRO" THERE FOR SWITCHING TO bLoop
     end
   elseif tSM.aLoop[ tSM.idxState ] == "FILE-LOAD" then
     tScoreBoard = loadScore( tScoreBoard )
-    tSM:walk( true )                    --SAVE THE NEWLY FILTERED ETC SB TO FILE
+    tSM:walk( true )                --SAVE THE NEWLY FILTERED ETC SB TO FILE
   elseif tSM.aLoop[ tSM.idxState ] == "FILE-SAVE" then
     saveScore( tScoreBoard )
-    tSM:bLresetGame()             --"INTRO" THERE FOR SWITCHING TO bLoop
+    tSM:bLresetGame()             	--"INTRO" THERE FOR SWITCHING TO bLoop
   end
 end
 --bLoop = { "INTRO", "EoG-pCOMP", "EoG-COMP-FB", "EoG-pUSER", "Q1TURNS", "Q2ERRORS", "MASK-ON" }
-function bLoop()    -- *** MAIN GAME C LOOP ***
+function bLoop()    								-- *** MAIN GAME C LOOP ***
   if tSM.bLoop[ tSM.idxState ] == "INTRO" and dtCounter > waitTime then
-    if narSection( "INTRO" ) then --if FUNCTION then - TRIED THIS TO SEE IF IT WOULD RUN AND IT DID! THIS IDEA CHANGES A LOT MORE CODE NOW LIKE NARRATOR RE-WRITE, IT'S INSPIRED THE SM TO CHANGE A FEW DAYS LATER TODAY DEC 22nd
+    if narSection( "INTRO" ) then
       tSM:fLenterSB()
     end
     -- *** COMPUTER GUESSES AT LAST CARD IN GAME, FOR USER TO SEE ***
