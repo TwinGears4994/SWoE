@@ -315,8 +315,8 @@ function loadSoundMain()
       table.insert( tSndMain, { "Computer", 1, love.audio.newSource( _file .. v, "static" ) } )
 		elseif _sndTblFiles[k]:match("33") then   --"Random <UP> colour shape stimulation..."
       table.insert( tSndMain, { "RNDstimulation", 5, love.audio.newSource( _file .. v, "static" ) } )
-		--elseif _sndTblFiles[k]:match("34") then   --"in total darkness, let your eyes walk about and allow contrast of light"
-      --table.insert( tSndMain, { "RNDstimulation", 5, love.audio.newSource( _file .. v, "static" ) } )
+		elseif _sndTblFiles[k]:match("34") then   --"in total darkness, let your eyes walk about and allow contrast of light"
+      table.insert( tSndMain, { "InTotalDarkness", 6, love.audio.newSource( _file .. v, "static" ) } )
     end
   end
 end

@@ -76,6 +76,7 @@ function funcInject( _table, target )   --target == "Score" or "Predict" or "Cur
       self.slice3W = self.bdrW *(5/12) /3
       self.scaleFrame = self.frameW /1000                     --IMAGES USED ARE MOSTLY 1000px almost square & SYMBOLS are 200px   tPortHole.scaleFrame
       self.fontPixLarge = tPortHole.frameH /24
+			self.fontPixSmall = math.floor( self.fontPixLarge /2 )	--SMALLER FONT FOR ROLLING SCOREBOARD
       self.yPad = self.fontPixLarge /4
     end
   elseif target == "SB" then      --tScoreBoard.bScoreEDITED

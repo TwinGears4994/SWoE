@@ -166,8 +166,8 @@ function drawPerTurnSB() --USER ON TOP OF SCOREBOARD LIKE BEFORE. COMP BELOW
 end
 
 function drawEoGSB()  --DRAW THE END OF GAME SCOREBOARD
-  love.graphics.setFont( gameFontSmall )  --gameFontLarge
-  local x  = tPortHole.boarder          --x COLOUMS
+  love.graphics.setFont( gameFontSmall )  --20px
+  local x  = tPortHole.boarder          	--x COLOUMS
   local x2 = x + tPortHole.quarterW
   local x3 = x2 + tPortHole.oneSixthW
   local x4 = x3 + tPortHole.slice3W
@@ -184,7 +184,7 @@ function drawEoGSB()  --DRAW THE END OF GAME SCOREBOARD
   love.graphics.printf( "CARDS", x4, tPortHole.boarder, tPortHole.slice3W, "right")  --SAME LENGTH REALLY HELPED
   love.graphics.printf( "SYMBS", x5, tPortHole.boarder, tPortHole.slice3W, "right")
   love.graphics.printf( "BRTURN", x6, tPortHole.boarder, tPortHole.slice3W, "right")
-  yPad = yPad + tPortHole.fontPixLarge + tPortHole.yPad
+  yPad = yPad + tPortHole.fontPixSmall + tPortHole.yPad
   
   for i = 1, #tScoreBoard do                  --ROTATE THROUGH THE ENTIRE SCOREBOARD TABLE
     _tColour = tScoreBoard[ tScoreBoard.iUserEditSB ].tColourName
@@ -202,7 +202,7 @@ function drawEoGSB()  --DRAW THE END OF GAME SCOREBOARD
     love.graphics.printf( tostring( tScoreBoard[i].numCards + tScoreBoard[i].numBRCards ), x4, yPad, tPortHole.slice3W, "right")
     love.graphics.printf( tostring( tScoreBoard[i].numSymbs + tScoreBoard[i].numBRSymbs ), x5, yPad, tPortHole.slice3W, "right")
     love.graphics.printf( tostring( tScoreBoard[i].numBRTurns ), x6, yPad, tPortHole.slice3W, "right")
-    yPad = yPad + tPortHole.yPad + tPortHole.fontPixLarge
+    yPad = yPad + tPortHole.yPad + tPortHole.fontPixSmall
   end
   return xOut, yOut
 end

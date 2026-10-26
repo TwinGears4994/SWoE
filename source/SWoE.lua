@@ -211,7 +211,7 @@ function eLoop()    -- *** COMPUTER BR GAME ELOOP ***
   end
 end
 
-function fLoop()    -- *** MAIN GAME E LOOP *** 
+function fLoop()    -- *** ROTATING SCOREBOARD SCREENSAVER *** 
   if tSM.curState == "SCOREBOARD" and dtCounter > waitTime then
     buildCard( tScoreBoard[ tScoreBoard.iUserEditSB ].EoGColour, 
       tScoreBoard[ tScoreBoard.iUserEditSB ].EoGShape, 1 )

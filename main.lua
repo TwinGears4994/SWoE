@@ -80,19 +80,19 @@ function love.load(arg)
   tScoreBoard:reset()
   -- *** FONT SETUP ***
   gameFontLarge = love.graphics.newFont( 'fonts/DejaVuSans-Bold.ttf', tPortHole.fontPixLarge )
-  gameFontSmall = love.graphics.newFont( 'fonts/DejaVuSans-Bold.ttf', tPortHole.fontPixLarge )
+  gameFontSmall = love.graphics.newFont( 'fonts/DejaVuSans-Bold.ttf', tPortHole.fontPixSmall )
   love.graphics.setFont( gameFontSmall )  --gameFontLarge
   --love.keyboard.setTextInput(true)
 end
 
-function love:update(dt)  -- *** TIMING FOR SPEECH LIVES HERE - NARRATOR CAN BE INTURUPTED :) ***
+function love:update(dt)  					-- *** TIMING FOR SPEECH LIVES HERE - NARRATOR CAN BE INTURUPTED :) ***
   dt = love.timer.getDelta()
   dtCounter = dtCounter + dt
   --LAYOUT THE SWITCHING MECHINISMS
-  if tSM.curState == "CRANK-START" then            --PUT THE STATEMACHINE IN MOTION
+  if tSM.curState == "CRANK-START" then	--PUT THE STATEMACHINE IN MOTION
     resetPlayers()
     tSM:aLfileCk()                  --NEW BOOL TO SETUP aLoop INDEX TO 1
-  elseif tSM.idxLoop == 1 then          --1st aLoop
+  elseif tSM.idxLoop == 1 then      --1st aLoop
     aLoop()
   elseif tSM.idxLoop == 2 then  		--bLoop
     bLoop()

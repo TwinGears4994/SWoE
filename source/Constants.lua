@@ -7,7 +7,7 @@ reVision = "Beta.4.65"
 love.graphics.setDefaultFilter("nearest", "nearest")
 love.window.setFullscreen( true, "desktop" )  --DEFAULT true RUNNING MODE FOR THIS EDUCATIONAL GAME, HAS LAST SAY
 tPortHole = {}   				--FOR OUR SCREEN SIZES TO BE MORE PORTABLE
-love.window.setTitle("Seeing Without EYES - " .. reVision)
+love.window.setTitle("Seeing Without Eyes - " .. reVision)
 love.window.display = 1
 --              *** GLOBAL STORAGE ***
 dtCounter = love.timer.getDelta()   --can't seem to work dt without this one liner
