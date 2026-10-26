@@ -246,8 +246,8 @@ end
 -- *** NARRATOR - Main Loop ***
 function loadSoundMain()
   local _timing = .5
-  local _sndTblFiles = love.filesystem.getDirectoryItems("source/sounds/Main2nd/") --5 More Directories
-  local _file = "source/sounds/Main2nd/"
+  local _sndTblFiles = love.filesystem.getDirectoryItems("source/sounds/Main/") --5 More Directories
+  local _file = "source/sounds/Main/"
   for k, v in ipairs( _sndTblFiles ) do
     if _sndTblFiles[k]:match("01") then       --"computer has guessed" SHAPE
       table.insert( tSndMain, { "CompHasGuessed", 2, love.audio.newSource( _file .. v, "static" ) } )
@@ -315,6 +315,8 @@ function loadSoundMain()
       table.insert( tSndMain, { "Computer", 1, love.audio.newSource( _file .. v, "static" ) } )
 		elseif _sndTblFiles[k]:match("33") then   --"Random <UP> colour shape stimulation..."
       table.insert( tSndMain, { "RNDstimulation", 5, love.audio.newSource( _file .. v, "static" ) } )
+		--elseif _sndTblFiles[k]:match("34") then   --"in total darkness, let your eyes walk about and allow contrast of light"
+      --table.insert( tSndMain, { "RNDstimulation", 5, love.audio.newSource( _file .. v, "static" ) } )
     end
   end
 end
@@ -322,8 +324,8 @@ end
 -- *** NARRATOR - INTRODUCTION ***
 function loadSoundIntro()
   local _timing = .5
-  local _sndTblFiles = love.filesystem.getDirectoryItems("source/sounds/Intro1st/") --5 More Directories
-  local _file = "source/sounds/Intro1st/"
+  local _sndTblFiles = love.filesystem.getDirectoryItems("source/sounds/Intro/") --5 More Directories
+  local _file = "source/sounds/Intro/"
   for k, v in ipairs( _sndTblFiles ) do
     if _sndTblFiles[k]:match("01") then       --WELCOME TO SWoE...
       table.insert( tSndIntro, { "WelcomeTo", 2.5, love.audio.newSource( _file .. v, "static" ) } )

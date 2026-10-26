@@ -47,7 +47,7 @@ end
 function drawBlackOut()
   --  1.7MB for a few loops until Narrator is intrupted
   --local introImage = love.graphics.newImage("source/Art/Art Hack-RainbowBody Carbon then Smallest Electrogravitics Craft.png")
-  local introImage = love.graphics.newImage("source/Art/Art Hack-RainbowBody Carbon then Smallest Electrogravitics Craft-CORA.png")
+  local introImage = love.graphics.newImage("source/Art/Art Hack-RainbowBody Carbon then Smallest Electrogravitics Craft.png")
   local sx = tPortHole.W /3071  --Both images use the same size of WxH pixels
   local sy = tPortHole.H /2008
   love.graphics.draw( introImage, 0,0,0,sx,sy )
