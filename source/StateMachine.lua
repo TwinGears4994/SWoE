@@ -2,7 +2,7 @@
 Brian T.Wilcox
 twingears@gmail.com
 ]]
-tSM = {
+tSM = {	--tSM.idxLoop tSM.curState tSM.idxState tSM.curDState tSM.tNarrTalk
   idxLoop = 1,
   curState = "CRANK-START",   --INDEX WITHIN THE ONE OF THE abcde Loops
   idxState = 1,
@@ -115,11 +115,11 @@ function tSM:bLresetGame( _bool )
   end
   self:updateText()
   iSpeak = 1
-  resetPlayers()    --ONLY RESET ON START UP AND EXITING SB INTO NEW GAME
+  resetPlayers()    		--ONLY RESET ON START UP AND EXITING SB INTO NEW GAME
 end
 
 function tSM:cLresetCard( _reset )
-  self.idxLoop = 3    -- cLoop
+  self.idxLoop = 3    	-- cLoop
   if _reset then
     self.idxState = 2   --"RESET-CARD"
   else
@@ -148,7 +148,7 @@ function tSM:updateText()       --THIS SHOULD HELP FIT THE ALREADY EXISTING CODE
 end
 
 function tSM:fLenterSB()
-  self.idxLoop = 6    -- fLoop
+  self.idxLoop = 6    	-- fLoop
   self.idxState = 2
   self.idxDState = 7
   --self:dState( false, false, true ) --( _bReStart, _bEdit, _bSB  )  --self.idxDState = 7

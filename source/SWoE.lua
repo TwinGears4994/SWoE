@@ -19,7 +19,7 @@ function aLoop()
   end
 end
 --bLoop = { "INTRO", "EoG-pCOMP", "EoG-COMP-FB", "EoG-pUSER", "Q1TURNS", "Q2ERRORS", "MASK-ON" }
-function bLoop()    								-- *** MAIN GAME C LOOP ***
+function bLoop()    								-- *** MAIN GAME B-LOOP ***
   if tSM.bLoop[ tSM.idxState ] == "INTRO" and dtCounter > waitTime then
     if narSection( "INTRO" ) then
       tSM:fLenterSB()
@@ -114,7 +114,7 @@ function cLoop()    -- *** MAIN GAME C LOOP ***
   end
 end
 
-function dLoop()    -- *** USER BR GAME DLOOP ***
+function dLoop()    -- *** USER BONUS ROUND GAME DLOOP ***
   local tTiming = { .6,.7,.8,.9,1,1,.9,.8,.7,.6 }
   if tSM.curState == "BR-FLASH-CARD" then
     if not tUserPredicted.bEoG2 then
@@ -161,7 +161,7 @@ function dLoop()    -- *** USER BR GAME DLOOP ***
   end
 end
 
-function eLoop()    -- *** COMPUTER BR GAME ELOOP ***
+function eLoop()    -- *** COMPUTER BONUS ROUND GAME ELOOP ***
   --local tTiming = { .3 }
   if tSM.curState == "BR-FLASH-CARD" then
     if not tCompPredicted.bEoG2 then

@@ -12,8 +12,9 @@ function narSection( _section ) --WE ARE GOING TO HAVE TO CLEAN UP MAIN SINCE BO
       {"intro",7},{"intro",3},{"intro",8},              --up, arrow, to reset display card
       {"intro",5},{"intro",3},{"shapes",9},             --left, arrow, shape,
       {"intro",6},{"intro",3},{"colours",9},            --right, arrow, colour, SELFINDEX
-      {"intro",4},{"intro",3},{"main",8}                --down, arrow, enter - missing select as a word!
-    }
+      {"intro",4},{"intro",3},{"main",8},               --down, arrow, enter - missing "select" as a word!
+			{"main",4},{"main",34}
+		}
     if iSpeak <= #tTalk then                            --IS NARRATOR DONE TALKING?
       iSpeak = narratorTalk( iSpeak, tTalk )            --IF INTURUPTED, KEYBOARD/JOYSTICK WILL CHANGE STATE EARLY
 --      return false
